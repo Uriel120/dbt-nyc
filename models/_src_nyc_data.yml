@@ -5,3 +5,18 @@ sources:
     tables:
       - name: yellow_nyc_data
       - name: taxi_zone_lookup
+  - name: bronze
+    database: gen-lang-client-0926669884
+    schema: "{{ target.schema}}"
+    config:
+      freshness:
+        warn_after:
+          count: 1
+          period: minute
+        error_after:
+          count: 24
+          period: hour
+      loaded_at_field: load_date
+    tables:
+      - name: yellow_nyc_data
+      - name: taxi_zone_lookup
