@@ -40,3 +40,8 @@ models:
     # Applies to all files under models/example/
     bronze:
       +materialized: table
+      +schema: "{{target.schema}}"
+    sliver:
+      +materialized: table
+      +schema: sliver
+
