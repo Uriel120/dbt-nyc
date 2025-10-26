@@ -1,0 +1,7 @@
+sources:
+  - name: nycdata
+    database: gen-lang-client-0926669884
+    schema: raw_data
+    tables:
+      - name: yellow_nyc_data
+      - name: taxi_zone_lookup
